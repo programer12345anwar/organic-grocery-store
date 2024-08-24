@@ -1,3 +1,4 @@
+/* -------------------------universal selector---------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +8,8 @@
 body {
   background-color: white;
 }
-
-.navbar .search-button {
-  padding: 12px 15px;
-  cursor: pointer;
-  background-color: yellow;
-  border-radius: 2px;
-  color: black;
+button {
+  font-size: 16px;
 }
 
 button:hover {
@@ -29,6 +25,9 @@ li a {
   text-decoration: none;
   color: #fff;
 }
+/* end of universal selector */
+
+/* -------------Header section design---------------- */
 
 header {
   padding: 12px;
@@ -48,8 +47,9 @@ header {
 .navbar .logo {
   color: #06d001;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 24px;
   flex: 1; /* Allows the logo to take up available space */
+  cursor: pointer;
 }
 
 .navitem ul {
@@ -57,7 +57,7 @@ header {
   display: flex;
   gap: 12px;
   flex: 2; /* Allows the nav items to take up more space */
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .navitem ul a:hover {
@@ -81,10 +81,16 @@ header {
   margin-right: 5px;
   border-radius: 5px;
 }
-
-.search-navbar .search-button {
-  border-radius: 5px;
+.navbar .search-button {
+  padding: 12px 15px;
+  cursor: pointer;
+  background-color: yellow;
+  border-radius: 2px;
+  color: black;
 }
+/* --------------------end of navbar design-------------------- */
+
+/* ----------------start of hero section or content section design--------------- */
 
 .fruit-heading {
   width: 100%; /* Ensure the heading takes up full width */
@@ -120,34 +126,52 @@ h2.vegetables {
 }
 
 .product img {
-  border-radius: 4px;
+  border-radius: 6px;
   width: 60%; /* Make the image responsive */
   height: auto;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  transition: width 0.3s ease-in-out;
+}
+.product img:hover {
+  cursor: pointer;
+  width: 63%;
+}
+.qty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.qty input {
+  width: 3rem;
+  border-radius: 0.1rem;
+  border: 0.1rem solid #0ced9b;
 }
 
 .product button {
-  background-color: #04aa6d; /* Green */
+  background-color: #0ced9b; /* Green */
   border: 2px solid transparent;
   color: white;
-  padding: 10px 25px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 4px 0; /* Reduced vertical margin */
+  margin-top: 1rem;
+  margin-bottom: 12px;
   cursor: pointer;
-  font-size: 12px; /* Adjust the font size */
+  font-size: 16px; /* Adjust the font size */
   border-radius: 6px; /* Add rounded corners */
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Smooth transition for hover effects */
 }
 
 .product button:hover {
-  background-color: #039f61; /* Slightly darker green on hover */
-  transform: scale(1.05); /* Slight zoom effect on hover */
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Add a shadow effect on hover */
+  background-color: yellow; /* Slightly darker green on hover */
+  color: black;
+  margin-right: 5px;
+  transform: scale(1.01); /* Slight zoom effect on hover */
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4); /* Add a shadow effect on hover */
 }
-
-.product button:active {
+F .product button:active {
   background-color: #028a57; /* Even darker green when clicked */
   transform: scale(1); /* Return to original size */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly reduced shadow */
@@ -156,7 +180,10 @@ h2.vegetables {
   color: #fda403;
 }
 
-/* Media Queries for Responsiveness */
+/* -----------------------End of the content section----------------------- */
+
+/* --------------------Responsiveness of the page----------------------- */
+
 @media (max-width: 768px) {
   .navitem ul {
     flex-direction: column;
@@ -200,3 +227,5 @@ h2.vegetables {
     grid-template-columns: 1fr; /* 1 product per row on very small screens */
   }
 }
+
+/* ---------------------End of responsiveness of the page---------------------- */
